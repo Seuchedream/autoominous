@@ -39,7 +39,6 @@ public class AutoOminousClient implements ClientModInitializer {
 
 		toggleKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
 			"key.autoominous.toggle",
-			InputConstants.Type.KEYSYM,
 			InputConstants.KEY_K,
 			category
 		));
@@ -69,7 +68,7 @@ public class AutoOminousClient implements ClientModInitializer {
 		if (!enabled) {
 			return;
 		}
-		if (mc.currentScreen != null) {
+		if (mc.getScreen() != null) {
 			// Kein Trinken, solange ein Menue offen ist
 			if (state == State.DRINKING) {
 				finishDrinking(mc, player);
@@ -150,11 +149,3 @@ public class AutoOminousClient implements ClientModInitializer {
 		}
 		state = State.IDLE;
 	}
-
-	private void restoreSlot(LocalPlayer player) {
-		if (player != null && previousSlot >= 0 && previousSlot < 9) {
-			player.getInventory().setSelectedSlot(previousSlot);
-		}
-		previousSlot = -1;
-	}
-}
