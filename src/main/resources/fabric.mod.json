@@ -1,0 +1,19 @@
+{
+	"schemaVersion": 1,
+	"id": "autoominous",
+	"version": "${version}",
+	"name": "Auto Ominous Bottle",
+	"description": "Trinkt per Hotkey-Automatik eine Ominous Bottle, sobald kein Bad Omen / Raid Omen aktiv ist (Raid-Farm).",
+	"authors": ["Fynn"],
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": ["net.fynn.autoominous.AutoOminousClient"]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
