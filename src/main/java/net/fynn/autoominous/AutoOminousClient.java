@@ -69,7 +69,7 @@ public class AutoOminousClient implements ClientModInitializer {
 		if (!enabled) {
 			return;
 		}
-		if (mc.screen != null) {
+		if (mc.currentScreen != null) {
 			// Kein Trinken, solange ein Menue offen ist
 			if (state == State.DRINKING) {
 				finishDrinking(mc, player);
