@@ -149,3 +149,4 @@ public class AutoOminousClient implements ClientModInitializer {
 		}
 		state = State.IDLE;
 	}
+}
